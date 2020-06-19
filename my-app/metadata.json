@@ -1,0 +1,35 @@
+{
+    "title": "John Keefe's Data Library",
+    "description": "Using Datasette to store and share my data",
+    "databases": {
+        "fixtures": {
+            "source": "Alternative source",
+            "source_url": "http://example.com/",
+            "tables": {
+                "example_table": {
+                    "description_html": "Custom <em>table</em> description",
+                    "license": "CC BY 3.0 US",
+                    "license_url": "https://creativecommons.org/licenses/by/3.0/us/"
+                }
+            }
+        },
+        "minneapolis": {
+            "tables": {
+                "Police_Use_of_Force": {
+                    "source": "Minneapolis Open Data Portal",
+                    "source_url": "http://opendata.minneapolismn.gov/datasets/police-use-of-force",
+                    "description": "Minneapolis Police use of force data, downloaded June 17, 2020",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                },
+                "Police_Stop_Data": {
+                    "source": "Minneapolis Open Data Portal",
+                    "source_url": "http://opendata.minneapolismn.gov/datasets/police-stop-data",
+                    "description": "Minneapolis Police stop data, downloaded June 17, 2020",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                }
+            }
+        }
+    }
+}
