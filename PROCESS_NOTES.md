@@ -47,3 +47,11 @@ Says the image size is 1.1GB! Oof.
 Note can check pricing and resources using `flyctl scale vm`.
 
 Can find it live at [https://johnkeefe-datasette.fly.dev/](https://johnkeefe-datasette.fly.dev/)
+
+## Subdomain hosting
+
+Pointed a CNAME record to `johnkeefe-datasette.fly.dev.`
+
+Then ran `flyctl certs create datasette.johnkeefe.net` to make it https.
+
+

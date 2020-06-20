@@ -2,17 +2,6 @@
     "title": "John Keefe's Data Library",
     "description": "Using Datasette to store and share my data",
     "databases": {
-        "fixtures": {
-            "source": "Alternative source",
-            "source_url": "http://example.com/",
-            "tables": {
-                "example_table": {
-                    "description_html": "Custom <em>table</em> description",
-                    "license": "CC BY 3.0 US",
-                    "license_url": "https://creativecommons.org/licenses/by/3.0/us/"
-                }
-            }
-        },
         "minneapolis": {
             "tables": {
                 "Police_Use_of_Force": {
@@ -31,10 +20,78 @@
                 },
                 "population_2010blocks_2020nabes": {
                     "source": "US Census & Minnesota Open Data Portal",
-                    "description": "2010 Minneapolis population by blocks, linked to their neighborhood",
+                    "description_html": "2010 Minneapolis population by blocks, linked to their neighborhood. For details and ideas for queries, <a href=''>see this blog post</a>, and for the column descriptions see <a href='https://johnkeefe.net/race-and-ethnicity-data-by-washington-dc-police-zones'>this one for Washington, DC</a> (they're the same).",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                }
+            }
+        },
+        "new_york_city": {
+            "tables": {
+                "nyc_2010censusblocks_2020policeprecincts": {
+                    "source": "US Census & NYC Open Data Portal, combined by John Keefe",
+                    "source_url": "https://johnkeefe.net/nyc-police-precinct-and-census-data",
+                    "description_html": "2010 NYC population by US Census blocks, with each block linked to the police precinct in which it sits. For details and column descriptions see <a href='https://johnkeefe.net/nyc-police-precinct-and-census-data'>this blog post</a>.",
                     "license": "CC BY-SA 4.0",
                     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
                 },
+                "nyc_2010pop_2020precincts": {
+                    "source": "US Census & NYC Open Data Portal, combined by John Keefe",
+                    "source_url": "https://johnkeefe.net/nyc-police-precinct-and-census-data",
+                    "description_html": "2010 NYC population by NYC police precinct, as they were drawn in 2020. For details and column descriptions see <a href='https://johnkeefe.net/nyc-police-precinct-and-census-data'>this blog post</a>.",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                },
+                "precinct_block_key": {
+                    "source": "US Census & NYC Open Data Portal, combined by John Keefe",
+                    "source_url": "https://johnkeefe.net/nyc-police-precinct-and-census-data",
+                    "description_html": "Just a list of US Census block numbers and the precincts in which they sit. Join this to US Census tables to get aggregates by precinct, as those precincts existed in 2020. For details see <a href='https://johnkeefe.net/nyc-police-precinct-and-census-data'>this blog post</a>.",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                }
+            }
+        },
+        "washington_dc": {
+            "tables": {
+                "dc_2010blocks_2020policedistricts_population": {
+                    "source": "US Census & DC Open Data Portal, combined by John Keefe",
+                    "source_url": "https://johnkeefe.net/race-and-ethnicity-data-by-washington-dc-police-zones",
+                    "description_html": "2010 DC population by US Census block, with each block linked to the police district and public service area in which it sits. For details and column descriptions see <a href='https://johnkeefe.net/race-and-ethnicity-data-by-washington-dc-police-zones'>this blog post</a>.",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                },
+                "dc_2010pop_by_2020police_districts": {
+                    "source": "US Census & DC Open Data Portal, combined by John Keefe",
+                    "source_url": "https://johnkeefe.net/race-and-ethnicity-data-by-washington-dc-police-zones",
+                    "description_html": "2010 DC population by DC police district. For details and column descriptions see <a href='https://johnkeefe.net/race-and-ethnicity-data-by-washington-dc-police-zones'>this blog post</a>.",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                }
+            }
+        },
+        "chicago": {
+            "tables": {
+                "chicago_2010blocks_2020policedistricts_population": {
+                    "source": "US Census & Chicago Open Data Portal, combined by John Keefe",
+                    "source_url": "https://johnkeefe.net/chicago-race-and-ethnicity-data-by-police-district",
+                    "description_html": "2010 population by US Census block, with each block linked to the police district area in which it sits, as those districts were drawn in 2020. For details and column descriptions see <a href='https://johnkeefe.net/chicago-race-and-ethnicity-data-by-police-district'>this blog post</a>.",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                },
+                "chicago_2010pop_by_2020policedistricts": {
+                    "source": "US Census & Chicago Open Data Portal, combined by John Keefe",
+                    "source_url": "https://johnkeefe.net/chicago-race-and-ethnicity-data-by-police-district",
+                    "description_html": "2010 Chicago population by police district, as those districts were drawn in 2020. For details and column descriptions see <a href='https://johnkeefe.net/chicago-race-and-ethnicity-data-by-police-district'>this blog post</a>.",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                },
+                "chicago_2010blocks_2020policedistricts_key": {
+                    "source": "US Census & Chicago Open Data Portal, combined by John Keefe",
+                    "source_url": "https://johnkeefe.net/chicago-race-and-ethnicity-data-by-police-district",
+                    "description_html": "Just a list of US Census block numbers and the police districts in which they sit. Join this to US Census tables to get aggregates by precinct, as those precincts existed in 2020. For details see <a href='https://johnkeefe.net/chicago-race-and-ethnicity-data-by-police-district'>this blog post</a>.",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                }
             }
         }
     }
