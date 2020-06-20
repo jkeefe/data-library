@@ -28,7 +28,13 @@
                     "description": "Minneapolis Police stop data, downloaded June 17, 2020",
                     "license": "CC BY-SA 4.0",
                     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
-                }
+                },
+                "population_2010blocks_2020nabes": {
+                    "source": "US Census & Minnesota Open Data Portal",
+                    "description": "2010 Minneapolis population by blocks, linked to their neighborhood",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                },
             }
         }
     }
