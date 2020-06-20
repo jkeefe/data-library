@@ -40,3 +40,7 @@ venv
 # Terraform
 .terraform
 *.tfvars
+
+# databases
+*.db
+
