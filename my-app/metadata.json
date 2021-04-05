@@ -2,6 +2,36 @@
     "title": "John Keefe's Data Library",
     "description": "Using Datasette to store and share my data",
     "databases": {
+        "fundata": {
+            "tables": {
+                "nyc_dog_licenses": {
+                    "source": "New York City Dept. of Mental Health and Hygeine",
+                    "source_url": "https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp",
+                    "description": "Dog license records for the 2018 'extract year.' Note that each record represents a unique dog license that was active during the year, but not necessarily a unique record per dog, since a license that is renewed during the year results in a separate record of an active license period. Each record stands as a unique license period for the dog over the course of the yearlong time frame."
+                }
+            }
+        },
+        "united_states": {
+            "tables": {
+                "2016-vote-fips-acp": {
+                    "source": "Various sources, assembled by John Keefe",
+                    "source_url": "https://github.com/jkeefe/counting-counties/blob/master/notebooks/data_prep.ipynb",
+                    "description": "County-by-county vote totals for the 2016 presidential election, with FIPS codes. Includes estimates for Alaska county-like areas."
+                },
+                "electoral_votes": {
+                    "source": "World Population Review, edited by John Keefe",
+                    "source_url": "https://github.com/jkeefe/counting-counties/blob/master/notebooks/data_prep.ipynb",
+                    "description": "Electoral votes assigned to each state. Note that Maine and Nebraska each get 2 statewide votes, and one for each of their congressional districts. Those are included in the list, as \"Maine-1,\" \"Nebraska-2,\" etc."
+                },
+                "maine-nebraska-cds": {
+                    "source": "John Keefe",
+                    "source_url": "https://github.com/jkeefe/counting-counties/blob/master/notebooks/data_prep.ipynb",
+                    "description": "Counties by FIPS code in Maine and Nebraska and the congressional district in which they sit (in 2020). Note that Kennebec county, Maine doesn't fully fit into congressional district Maine-1, though it mostly does so I've put it there.",
+                    "license": "CC BY-SA 4.0",
+                    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                }
+            }
+        },
         "minneapolis": {
             "tables": {
                 "Police_Use_of_Force": {
